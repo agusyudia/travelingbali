@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend Bali Traveling",
+  "main": "index.js",
+  "scripts": {
+    "test": "Bali Traveling"
+  },
+  "keywords": [
+    "bali",
+    "traveling"
+  ],
+  "author": "Bali Traveling",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.13.0",
+    "uuid": "^8.3.2"
+  }
+}

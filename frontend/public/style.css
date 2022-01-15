@@ -1,0 +1,49 @@
+.bg-home{
+    background-image: url('image/bg1.jpg');
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    background-position: center center;
+    background-size: 100%;
+}
+body {
+    font-family: 'Open Sans' !important;
+}
+
+p {
+    font-family: 'Poppins' !important;
+}
+
+.hr {
+    border-top:4px solid #ffffff ;
+    margin: 20px 30px ;
+}
+
+.yellow{
+    color: yellow;
+}
+.text-white{
+    color: #ffffff !important;
+}
+
+.tagg{
+    font-family: 'Pinyon Script' !important;
+}
+
+.img-hover-zoom { /* Modify this according to your need */
+    overflow: hidden; /* Removing this will break the effects */
+  }
+  .carousel-caption h2:hover {
+      display: block;
+  }
+.img-hover-zoom--blur img {
+    transition: transform 1s, filter 2s ease-in-out;
+    filter: blur(1px);
+    transform: scale(1.2);
+  }
+  
+  /* The Transformation */
+  .img-hover-zoom--blur:hover img {
+    filter: blur(0);
+    transform: scale(1);
+  }
