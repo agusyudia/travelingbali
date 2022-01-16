@@ -1,13 +1,19 @@
 const db = require("../models");
 const Kategori = db.kategori;
 const Op = db.Sequelize.Op;
+const multer =require('multer');
 
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.title) {
+    if (!req.body.nama) {
       res.status(400).send({
-        message: "Content can not be empty!"
+        message: "name can not be empty!"
+      });
+      return;
+    }if (!req.body.image) {
+      res.status(400).send({
+        message: "image can not be empty!"
       });
       return;
     }

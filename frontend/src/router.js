@@ -12,9 +12,11 @@ import Detail from "./views/User/detail.vue";
 
 const editdetailkategori = () => import("./views/Admin/EditDetailKategori.vue")
 import tambahdetailkategori from "./views/Admin/TambahDetailKategori.vue";
+import detailkategoriedit from "./views/Admin/detailkategoriedit.vue";
 
 const BoardAdmin = () => import("./views/Admin/EditKategori.vue")
 import tambahkategori from "./views/Admin/tambahkategori.vue";
+import kategoriedit from "./views/Admin/kategoriupdate.vue";
 
 
 const routes = [
@@ -70,6 +72,12 @@ const routes = [
     component: tambahkategori,
   },
   {
+    path: "/kategoriupdate/:id",
+    name: "kategoriedit",
+    // lazy-loaded
+    component: kategoriedit,
+  },
+  {
     path: "/editdetailkategori",
     name: "editdetailkategori",
     // lazy-loaded
@@ -80,6 +88,12 @@ const routes = [
     name: "tambahdetailkategori",
     // lazy-loaded
     component: tambahdetailkategori,
+  },
+  {
+    path: "/detailkategoriedit/:id",
+    name: "detailkategoriedit",
+    // lazy-loaded
+    component: detailkategoriedit,
   },
   
 ];

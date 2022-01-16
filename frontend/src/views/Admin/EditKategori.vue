@@ -17,8 +17,8 @@
                 <td>{{kategori.nama}}</td>
                 <td>{{kategori.image}}</td>
                 <td>
-                    <button class="btn btn-warning m-1"><span class="fa fa-pencil"></span></button>
-                    <button class="btn btn-danger m-1"><span class="fa fa-trash"></span></button>
+                    <a :href="'/kategoriupdate/' + kategori.id" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                    <button class="btn btn-danger m-1" @click="deletekategori(kategori.id)"><span class="fa fa-trash"></span></button>
                 </td>
             </tr>
         </tbody>
@@ -50,6 +50,17 @@ export default {
                 console.log(e);
                 });
             },
-    },
+        // delete comments
+        deletekategori(id) {
+            Kategori.delete(id)
+                .then(response => {
+                console.log(response.data);
+                window.location.reload();
+                })
+                .catch(e => {
+                console.log(e);
+                });
+            }
+        },
 }
 </script>

@@ -69,7 +69,7 @@
               </li>
               <li class="nav-item">
                 <a class="btn" @click.prevent="logOut">
-                  <font-awesome-icon icon="sign-out-alt" />
+                  <span class="fa fa-sign-out"></span>
                 </a>
               </li>
             </ul>
