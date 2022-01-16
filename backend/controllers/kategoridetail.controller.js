@@ -5,9 +5,9 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.title) {
+    if (!req.body.nama) {
       res.status(400).send({
-        message: "Content can not be empty!"
+        message: "nama can not be empty!"
       });
       return;
     }
@@ -17,7 +17,8 @@ exports.create = (req, res) => {
       id_kategori: req.body.id_kategori,
       nama: req.body.nama,
       alamat: req.body.alamat,
-      image: req.body.image
+      image: req.body.image,
+      deskripsi: req.body.deskripsi,
     };
   
     // Save Tutorial in the database
@@ -92,7 +93,7 @@ exports.findOnekategori = (req, res) => {
 exports.update = (req, res) => {
     const id = req.params.id;
   
-    DetailKategori.update(req.body, {
+    KategoriDetail.update(req.body, {
       where: { id: id }
     })
       .then(num => {
@@ -117,7 +118,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id;
   
-    DetailKategori.destroy({
+    KategoriDetail.destroy({
       where: { id: id }
     })
       .then(num => {

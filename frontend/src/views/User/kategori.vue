@@ -9,7 +9,7 @@
 
                 <div class="col-lg-4 mb-3" v-for="(kategori, index) in kategoris" :key="index">
                     <div class="card m-0">
-                            <a href=""><img :src=" '/image/'+kategori.image" class="card-img-top" ></a>
+                            <a  :href="'/kategoridetail/' + kategori.id"><img :src=" '/image/'+kategori.image" class="card-img-top" ></a>
                         <div class="card-body">
                             <div class="row">
                                 <h4 h4 class="col-8">{{kategori.nama}}</h4>

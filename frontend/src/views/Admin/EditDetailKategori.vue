@@ -23,8 +23,8 @@
                 <td>{{detailkategori.image}}</td>
                 <td>{{detailkategori.deskripsi}}</td>
                 <td>
-                    <button class="btn btn-warning m-1"><span class="fa fa-pencil"></span></button>
-                    <button class="btn btn-danger m-1" @click.prevent="deleteKategori"><span class="fa fa-trash"></span></button>
+                    <a :href="'/detailkategoriupdate/' + detailkategori.id" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                    <button class="btn btn-danger m-1" @click="deletekategori(detailkategori.id)"><span class="fa fa-trash"></span></button>
                 </td>
             </tr>
         </tbody>
@@ -56,15 +56,16 @@ export default {
                 console.log(e);
                 });
             },
-            deleteKategori() {
-            KategoriDetail.delete(this.detailkategoris.id)
+        // delete comments
+        deletekategori(id) {
+            KategoriDetail.delete(id)
                 .then(response => {
                     console.log(response.data);
-                    this.$router.push({ name: "editdetailkategori" });
+                    window.location.reload();
                 })
                 .catch(e => {
                     console.log(e);
-            });
+                });
         }
     },
 }

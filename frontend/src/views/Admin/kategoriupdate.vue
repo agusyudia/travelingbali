@@ -20,7 +20,7 @@
             />
             <p>Before : {{kategoris.image}}</p>
           </div>
-          <button class="btn btn-success" type="submit" @click="updateKategori">Update</button>
+          <button class="btn btn-success" type="submit" @click="updateKategori">Tambah</button>
         </form>
       </div>
     </div>
