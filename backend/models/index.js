@@ -29,6 +29,7 @@ db.role = require("../models/role.model.js")(sequelize, Sequelize);
 db.kategori = require("./kategori.model.js")(sequelize, Sequelize);
 db.kategoridetail = require("./kategoridetail.model.js")(sequelize, Sequelize);
 db.commenst = require("./commenst.model.js")(sequelize, Sequelize);
+db.kontak = require("./kontak.model.js")(sequelize, Sequelize);
 
 db.role.belongsToMany(db.user, {
   through: "user_roles",

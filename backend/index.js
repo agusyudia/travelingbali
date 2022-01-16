@@ -40,6 +40,7 @@ require('./routes/user.routes')(app);
 require('./routes/kategori.routes')(app); 
 require('./routes/kategoridetail.routes')(app); 
 require('./routes/commenst.routes')(app); 
+require('./routes/kontakroutes')(app); 
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
