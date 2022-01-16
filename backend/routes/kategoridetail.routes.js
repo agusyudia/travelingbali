@@ -12,5 +12,8 @@ module.exports = function(app) {
 
   app.get("/api/kategoridetail", controller.findAll);
   app.get("/api/kategoridetail/:id", controller.findOne);
+  app.get("/api/kategoridetail/kategori/:id_kategori", controller.findOnekategori);
+  app.put("/api/kategoridetail/:id", controller.update);
+  app.delete("/api/kategoridetail/:id", controller.delete);
 
 };

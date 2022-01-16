@@ -12,5 +12,7 @@ module.exports = function(app) {
 
   app.get("/api/kategori", controller.findAll);
   app.get("/api/kategori/:id", controller.findOne);
+  app.put("/api/kategori/:id", controller.update);
+  app.delete("/api/kategori/:id", controller.delete);
 
 };

@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
     const Commenst = sequelize.define("commenst", {
-      id_user: {
+      nama_user: {
         type: Sequelize.STRING
       },
       id_detailkategori: {

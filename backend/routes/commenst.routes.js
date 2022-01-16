@@ -13,6 +13,7 @@ module.exports = function(app) {
   app.get("/api/commenst", controller.findAll);
   app.post("/api/commenst", controller.create);
   app.get("/api/commenst/:id", controller.findOne);
+  app.get("/api/commenst/kategori/:id", controller.findOnekategori);
   app.put("/api/commenst/:id", controller.update);
   app.delete("/api/commenst/:id", controller.delete);
 

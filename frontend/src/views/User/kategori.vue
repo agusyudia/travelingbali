@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                              <a href="" class="nav-link">Show More...</a>
+                              <a :href="'/kategoridetail/' + kategori.id" class="nav-link">Show More...</a>
                             </div>
                         </div>
                     </div>

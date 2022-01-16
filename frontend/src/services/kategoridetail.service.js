@@ -10,6 +10,10 @@ class kategoridetail {
     return http.get(`/kategoridetail/${id}`);
   }
 
+  getkategori(id_kategori) {
+    return http.get(`/kategoridetail/kategori/${id_kategori}`);
+  }
+
   create(data) {
     return http.post("/kategoridetail", data);
   }

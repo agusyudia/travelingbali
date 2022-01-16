@@ -14,7 +14,7 @@
                 <div class="col-lg-4 mb-3" v-for="(detailkategori, index) in detailkategoris" :key="index">
                     <div class="card m-0">
                         <div class="img-hover-zoom img-hover-zoom--blur">
-                            <router-link to="/detail"><img  :src="'/image/detail/'+detailkategori.image" class="card-img-top" alt="..." style="height:250px"></router-link>
+                            <a :href="'/detail/' + detailkategori.id"><img  :src="'/image/detail/'+detailkategori.image" class="card-img-top" alt="..." style="height:250px"></a>
                         </div>
                         <div class="card-body" style="height:150px">
                             <div class="row">

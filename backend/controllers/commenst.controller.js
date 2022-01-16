@@ -5,12 +5,12 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.id_detailkategori) {
+    if (!req.body.nama_user) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
       return;
-    }if (!req.body.id_user) {
+    }if (!req.body.id_detailkategori) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
@@ -24,7 +24,7 @@ exports.create = (req, res) => {
   
     // Create a Tutorial
     const commenst = {
-      id_user: req.body.id_user,
+      nama_user: req.body.nama_user,
       id_detailkategori: req.body.id_detailkategori,
       commenst: req.body.commenst,
     };
@@ -80,6 +80,21 @@ exports.findOne = (req, res) => {
       });
   };
 
+  exports.findOnekategori = (req, res) => {
+    const id_detailkategori = req.params.id;
+    var condition = id_detailkategori ? { id_detailkategori: { [Op.like]: `%${id_detailkategori}%` } } : null;
+  
+    Commenst.findAll({where:condition})
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving tutorials."
+      });
+    });
+  };
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
     const id = req.params.id;
